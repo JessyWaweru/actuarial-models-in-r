@@ -4,12 +4,11 @@ library(scales)
 library(forecast) # Essential for Time Series Analysis (ARIMA)
 library(gridExtra)
 
-# 1. INPUT YOUR HISTORICAL DATA HERE
-# Replace the numbers in these vectors with the exact figures from your screenshots
-# Ensure there are exactly 8 numbers in each vector, ending with the 2023/24 data
+# 1. NHIF HISTORICAL DATA
+# Annual contributions and claims, financial years 2016/17 to 2023/24
 years <- 2017:2024 # Represents financial years ending 2017 to 2024
-contributions <- c(35071.6, 45409.9, 56287.1, 59500.5, 60775.4, 78392.3, 81596.4, 72949.1) # REPLACE THESE
-claims <- c(26524.1, 39061.3, 53424.6, 53462.6, 54061.8, 63856.7, 67907.2, 68300.6)       # REPLACE THESE
+contributions <- c(35071.6, 45409.9, 56287.1, 59500.5, 60775.4, 78392.3, 81596.4, 72949.1)
+claims <- c(26524.1, 39061.3, 53424.6, 53462.6, 54061.8, 63856.7, 67907.2, 68300.6)
 
 df_history <- data.frame(Year = years, Contributions = contributions, Claims = claims)
 
